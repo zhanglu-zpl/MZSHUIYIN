@@ -21,8 +21,8 @@ class getcookie():
     driver.find_element(By.XPATH, '//*[@id="component_navbar"]/nav/div/div[2]/ul[1]/li[2]/a/span')
     dictCookies = driver.get_cookies()
     jsonCookies = json.dumps(dictCookies)
-    with open('C:/Users/shyc/.jenkins/workspace/meizhecuxiao/MZSHUIYIN/cookies.txt', 'w') as f:
-    #with open('../MZSHUIYIN/cookies.txt', 'w') as f:
+    # with open('C:/Users/shyc/.jenkins/workspace/meizhecuxiao/MZSHUIYIN/cookies.txt', 'w') as f:
+    with open('../MZSHUIYIN/cookies.txt', 'w') as f:
         f.write(jsonCookies)
         f.flush()
     print('cookies保存成功！')

@@ -1,9 +1,10 @@
 from selenium.webdriver.common.by import By
 
+
 class commond_ele():
     hover_discount = (By.XPATH, '/html/body/div[4]/div[1]/header/nav/div/div[2]/ul[1]/li[2]/a')  # 促销悬浮元素
     # 活动创建-折扣/减价[0]、SKU打折[1]、循环打折[2]、满减/满就包邮[3]、第二件促销[4]、全店折扣/减价[5]、全店满减/包邮[6]、淘金币抵扣[7]、折上折元素[8]
-    promotion = (By.CSS_SELECTOR, 'div.amWJu6uN.UC4tVJBm.ybOZHe0x > div.o8VxI75D > a.BV2UTq8x > span.UR73VILe')
+    # promotion = (By.CSS_SELECTOR, 'div.amWJu6uN.UC4tVJBm.ybOZHe0x > div.o8VxI75D > a.BV2UTq8x > span.UR73VILe')
     #[0]置顶，[1]置底
     topping = (By.CSS_SELECTOR, 'ul.p7kswUBL > li')
 
@@ -142,7 +143,6 @@ class sku_discount():      # sku打折
     clear_up2 = (By.XPATH, '//*[@id="dialog192610-default-action"]')  # sku折扣设置-二次确认清空
     lowest_certainly = (By.XPATH, '//*[@id="lowest-sku-settings-container"]/div/div/div[5]/button[2]')  # sku折扣设置-显示最低价sku-整体弹框确定
     lowest_cancel = (By.XPATH, '//*[@id="lowest-sku-settings-container"]/div/div/div[5]/button[1]') # sku折扣设置-显示最低价sku-整体弹框取消
-
 
 
 class circulate_discount():  # 循环打折

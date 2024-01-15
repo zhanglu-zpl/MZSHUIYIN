@@ -1,8 +1,8 @@
 import pytest
 import os
 import shutil
-from common.getcookie import getcookie
-from common.logincookie import clear_directory as cle
+from MZSHUIYIN.common.getcookie import getcookie
+from MZSHUIYIN.common.logincookie import clear_directory as cle
 from common.logger import Logger
 
 if __name__ == '__main__':

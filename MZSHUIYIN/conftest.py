@@ -17,6 +17,7 @@ from selenium.webdriver.common.by import By
 #from webdriver_manager.chrome import ChromeDriverManager
 import pytest
 
+
 #import allure
 #from selenium import webdriver
 #from common.logger import Logger
@@ -51,8 +52,8 @@ def driver1():
     driver = uc.Chrome(options=browser)
     ### 打开要自动登录的网站
     driver.get("https://meizhe.meideng.net")
-    #with open('../MZSHUIYIN/cookies.txt', 'r', encoding='utf8') as f:
-    with open('C:/Users/shyc/.jenkins/workspace/meizhecuxiao/MZSHUIYIN/cookies.txt', 'r', encoding='utf8') as f:
+    with open('../MZSHUIYIN/cookies.txt', 'r', encoding='utf8') as f:
+    # with open('C:/Users/shyc/.jenkins/workspace/meizhecuxiao/MZSHUIYIN/cookies.txt', 'r', encoding='utf8') as f:
         listCookies = json.loads(f.read())
     for cookie in listCookies:
         cookie_dict = {
@@ -69,7 +70,7 @@ def driver1():
         driver.add_cookie(cookie_dict)
         # browser.refresh()  # 刷新网页,cookies才成功
     driver.get("https://meizhe.meideng.net")
-    driver.implicitly_wait(3)
+    driver.implicitly_wait(13)
     driver.find_element(By.XPATH, '/html/body/div[9]/ko-modal-global-adv/div/div/div/div/div/button').click()
     #driver.implicitly_wait(3)
     #driver.find_elements(by=By.CSS_SELECTOR, value='ul.p7kswUBL > li')[0].click()

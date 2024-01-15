@@ -2,7 +2,7 @@ import datetime
 import os,re
 import time,json
 import allure
-from common.logger import Logger
+from MZSHUIYIN.common.logger import Logger
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.select import Select
